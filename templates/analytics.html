@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Analytics</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>☀ Solar AI</h2>
+
+<a href="{{ url_for('dashboard') }}">🏠 Dashboard</a>
+<a href="{{ url_for('forecast') }}">📈 Forecast</a>
+<a href="{{ url_for('analytics') }}">📊 Analytics</a>
+<a href="{{ url_for('research') }}">🧠 Research</a>
+<a href="{{ url_for('about') }}">ℹ About</a>
+<a href="{{ url_for('logout') }}">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+<h1>AI Model Analytics</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Model</h2>
+<p>LSTM</p>
+</div>
+
+<div class="card">
+<h2>Optimizer</h2>
+<p>Adam</p>
+</div>
+
+<div class="card">
+<h2>Loss</h2>
+<p>MSE</p>
+</div>
+
+<div class="card">
+<h2>Epochs</h2>
+<p>30</p>
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h2>Training Samples</h2>
+<p>36192</p>
+</div>
+
+<div class="card">
+<h2>Testing Samples</h2>
+<p>9048</p>
+</div>
+
+<div class="card">
+<h2>Sequence Length</h2>
+<p>24 Hours</p>
+</div>
+
+<div class="card">
+<h2>Input Features</h2>
+<p>4</p>
+</div>
+
+</div>
+
+<div class="forecast-card">
+
+<h2>Current AI Prediction</h2>
+
+<h1>{{ result.dni }} W/m²</h1>
+
+<p>Estimated Solar Power : {{ result.power }} kW</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
